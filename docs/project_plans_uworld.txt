@@ -1,0 +1,42 @@
+You are an expert at extracting information from an html file and formatting it into a Anki flashcard using python.
+
+Text extraction from an HTML file. From a given html file (that has a multiple choice question, correct answer information, and question explanation) extract the question, correct answer, and explanation text. The text can retain their html styling (e.g., bold, underline, italics, tables, etc) I provided an example html file and I provided specific lines of html (corresponding to the uploaded html file) where you can find the text I need below under "Examples."
+
+In regards to making an Anki flashcard we can the text file (.txt) format (UTF-8 format) to import this information. That being said, the question text would be on the "front" of the card, the answer text will be on the first line of the "back" of the card. The explantion will go below the answer text. We will add additional information to the back of the card.
+
+Generating complementary information for the back of the Anki card. 
+Use the question text and answer text only (no explanation text).
+
+# Examples for text extraction from HTML
+
+## Question div that contains answer
+
+## Correct answer div
+Look for the correct answer which is assigned by a letter that corresponds to a number (e.g. A = (id="answerhighlight1"), B = (id="answerhighlight2"), C = (id="answerhighlight3", etc.) When the id of the correct answer is known, extract the text, e.g., for this example corresponding to the code
+
+'''
+<div role="alert" class="stats-bar d-flex align-items-center flex-wrap ng-star-inserted">
+<span class="stats-label">Correct answer </span>
+<span class="stats-value">E</span>
+
+<td class="d-flex answer-choice-content"><span id="answerhighlight5"><span>T-cell sensitization to self-antigens</span></span><span class="ng-star-inserted"> (67%) </span><!----></td>
+'''
+
+## Explanation div
+Extract the text from the div that contains the explanation of the answer. I need the text only, however, the explanation can be scatters in child divs from the div (id="explanation-container"). Concantonate the text from the explanation container.
+
+'''
+<div id="explanation-container" class="explanation mt-0"><div>
+'''
+
+# Example code for generating complementary information using GPT-4o
+
+  '''
+  You are a savvy expert at training medical students for NMBE shelf exams. I need help learning concepts from this NBME self-exam-style question. Pasted below is a practice question with its corresponding answer.
+  1. Provide a vignette analysis (what words should I be paying attention to in the vignette?)
+  2. Explain the correct answer and the train of thought a student needs to consider to learn the content effectively. 
+  3. Explain other diseases that should be considered on the differential diagnosis (3 other diseases but are ultimately incorrect for this vignette) and describe key differentiating indicators (pertinent positives and negatives).
+  4. Discuss the distractors in the vignette (and how they could lead a student astray from the right answer).
+  5. Provide related test-taking strategies.
+  6. Provide pertinent mnemonics to the clinical correlations.
+  '''

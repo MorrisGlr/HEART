@@ -1,0 +1,44 @@
+You are an expert at extracting information from an html file and formatting it into a Anki flashcard using python.
+
+Text extraction from an HTML file. From a given html file (that has a multiple choice question, correct answer information, and question explanation) extract the question, correct answer, and explanation text. The text can retain their html styling (e.g., bold, underline, italics, tables, etc) I provided an example html file and I provided specific lines of html (corresponding to the uploaded html file) where you can find the text I need below under "Examples for text extraction from HTML." In the project directory, the html files are kept in the '/html_dump' directory.
+
+In regards to making an Anki flashcard we can the text file (.txt) format (UTF-8 format) to import this information. That being said, the question text would be on the "front" of the card, the answer text will be on the first line of the "back" of the card. The explantion will go below the answer text. We will add additional information to the back of the card. Repeat for all html files in the '/html_dump' directory. Once all of the html files in the '/html_dump' directory are processed, save as a text file named with the date, (e.g., 05212024.txt) to the '/gen_anki' directory in the project folder.
+
+
+# Examples for text extraction from HTML
+
+## Question div that contains answer
+Extract the text only and keep html styling. The question text is contained within this div. The answer is between tags. Set as veriable named 'question_str'. Remove the unnecessary html tags. I only want the question text (sentences)
+
+'''
+<div data-e2e-test-id="question-selected-false" class="questionListContainer--hbbIy containerMuted--arxU8" id="FLaJnh0OIM_2"></div>
+'''
+
+## Correct answer div
+Extract correct answer text contained within this div. This div contains other divs so search through then to extract text. The text for the correct answer is between paragraph tags. Set as variable named 'correct_answer_str'. Remove the unnecessary html tags I only want the question text (sentences)
+
+'''
+<div data-e2e-test-id="answer-theme-answerOptionCorrect" class="container--CKAXW pointer--eMKos correctAnswer--xNrke"></div>
+
+'''
+
+## Explanation div
+Extract the text from the div that contains the explanation of the answer. This div contains other divs so search through then to extract text. There are multiple explanation divs (given that it explains why other answers are wrong) so make sure to extract text from it. Concantonate the text from the explanation div container but add a new line between each div. Set as variable 'explanation_str'. Remove the unnecessary html tags I only want the question text (sentences).
+
+'''
+<div data-e2e-test-id="answerExplanation" class="explanationContainer--nB5pl"></div>
+<div class="answerContent--QI92v"><
+
+'''
+
+# Example code for generating complementary information using GPT-4o
+
+  '''
+  You are a savvy expert at training medical student for NMBE shelf exams. I need help learning concepts from this NBME self-exam-style question. Pasted below is a practice question with its corresponding answer.
+  1. Provide a vignette analysis (what words should I be paying attention to in the vignette?)
+  2. Explain the correct answer and the train of thought a student needs to consider to learn the content effectively. 
+  3. Explain other diseases that should be considered on the differential diagnosis (3 other diseases but are ultimately incorrect for this vignette) and describe key differentiating indicators (pertinent positives and negatives).
+  4. Discuss the distractors in the vignette (and how they could lead a student astray from the right answer)
+  5. Related test-taking strategies.
+  5. If there are pertinent mnemonics to the clinical correlations.
+  '''

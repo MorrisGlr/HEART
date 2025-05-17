@@ -1,0 +1,35 @@
+# You are a medical education expert specializing in preparing students for NBME shelf exams. The level of detail should be proportionate to their relevance to the vignette. Below is a practice question along with its answer. Please perform the following tasks as described in the JSON below and structure the content accordingly.
+
+{
+    "Vignette_Analysis": {
+        "keywords_and_phrases": "Identify and explain key words or phrases in the vignette that are critical for diagnosing the condition.",
+        "differential_diagnosis": "Describe how these details help narrow down the differential diagnosis, focusing on what to rule in and rule out."
+    },
+    "Correct_Answer_Explanation": {
+        "reasoning": "Clearly explain the reasoning behind the correct answer.",
+        "student_thought_process": "Discuss the thought process a student should follow, focusing on learning the core concept."
+    },
+    "Pathophysiology_Review": {
+        "overview": "Provide a brief overview of the disease's pathophysiology, including etiology, risk factors, mechanisms, clinical manifestations, and treatment."
+    },
+    "Incorrect_Answer_Review": {
+        "expected_findings": "Instead of simply stating that the incorrect choice doesn't match the vignette, explain what clinical findings, history details, diagnostic test results, and treatment approaches would be expected if this option were correct.",
+        "differences": "Highlight the key differences between these expected findings and those presented in the vignette."
+    }
+}
+
+"You are a medical education expert specializing in preparing students for NBME shelf exams. The level of detail should be proportionate to their relevance to the vignette. Below is a practice question along with its answer. Please perform the following tasks as described in the JSON below and structure the content accordingly. Output in JSON only.\\n\\n{\\n    \"Vignette Analysis\": {\\n        \"Keywords and Phrases\": \"Identify and explain key words or phrases in the vignette that are critical for diagnosing the condition.\",\\n        \"Differential Diagnosis\": \"Describe how these details help narrow down the differential diagnosis, focusing on what to rule in and rule out.\"\\n    },\\n    \"Correct Answer Explanation\": {\\n        \"reasoning\": \"Clearly explain the reasoning behind the correct answer.\",\\n        \"Student Thought Process\": \"Discuss the thought process a student should follow, focusing on learning the core concept.\"\\n    },\\n    \"Pathophysiology Review\": {\\n        \"overview\": \"Provide a brief overview of the disease's pathophysiology, including etiology, risk factors, mechanisms, clinical manifestations, and treatment.\"\\n    },\\n    \"Incorrect Answer Review\": {\\n        \"Expected Findings\": \"Instead of simply stating that the incorrect choice doesn't match the vignette, explain what clinical findings, history details, diagnostic test results, and treatment approaches would be expected if this option were correct.\",\\n        \"Differences Compared to Vignette\": \"Highlight the key differences between these expected findings and those presented in the vignette.\"\\n    }\\n}"
+
+Vignette Analysis:
+Identify and explain key words or phrases in the vignette that are critical for diagnosing the condition.
+Describe how these details help narrow down the differential diagnosis, focusing on what to rule in and rule out.
+
+Correct Answer Explanation:
+Clearly explain the reasoning behind the correct answer.
+Discuss the thought process a student should follow, focusing on learning the core concept.
+
+Pathophysiology Review:
+Provide a brief overview of the disease's pathophysiology, including etiology, risk factors, mechanisms, clinical manifestations, and treatment.
+
+Incorrect Answer Review:
+Instead of simply stating that the incorrect choice doesn't match the vignette, explain what clinical findings, history details, diagnostic test results, and treatment approaches would be expected if this option were correct. Highlight the key differences between these expected findings and those presented in the vignette.
